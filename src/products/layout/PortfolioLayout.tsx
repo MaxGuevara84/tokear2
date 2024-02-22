@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 // import logo from "../../assets/img/undraw.svg.svg";
 import { NavBar } from "../../shared";
 
-export const StoreLayout = () => {
+export const PortfolioLayout = () => {
   const navigate = useNavigate();
 
   // const bienvenido = () => {

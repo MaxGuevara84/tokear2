@@ -1,6 +1,6 @@
 import { Button, Image, Input, Textarea } from "@nextui-org/react";
 
-export const NewProduct = () => {
+export const Contact = () => {
   return (
     <div className="w-full flex-col">
       <h1 className="text-2xl font-bold">Nuevo producto</h1>

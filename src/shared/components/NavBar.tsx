@@ -4,9 +4,9 @@ import styles from "./NavBar.module.css";
 
 const routes = [
   { to: "/store/inicio", text: "Inicio" },
-  { to: "/store/complete", text: "Cerificado" },
-  { to: "/store/men", text: "Experiencia" },
-  { to: "/store/women", text: "Estudios" },
+  { to: "/store/certificates", text: "Cerificado" },
+  { to: "/store/experiencie", text: "Experiencia" },
+  { to: "/store/studies", text: "Estudios" },
 ];
 
 export const NavBar = () => {
@@ -29,7 +29,12 @@ export const NavBar = () => {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={NavLink} color="primary" to="/store/new" variant="flat">
+          <Button
+            as={NavLink}
+            color="primary"
+            to="/store/contact"
+            variant="flat"
+          >
             Contacto
           </Button>
         </NavbarItem>

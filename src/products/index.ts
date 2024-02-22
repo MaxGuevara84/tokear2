@@ -1,14 +1,9 @@
+export { ProductCard } from "./components/ProductCard";
+export { ProductList } from "./components/ProductList";
 
+export { PortfolioLayout } from "./layout/PortfolioLayout";
 
-
-export { ProductCard } from './components/ProductCard';
-export { ProductList } from './components/ProductList';
-
-
-export { StoreLayout } from './layout/StoreLayout';
-
-
-export { CompleteListPage } from './pages/CompleteListPage';
-export { MensPage } from './pages/MensPage';
-export { NewProduct } from './pages/NewProduct';
-export { WomensPage } from './pages/WomensPage';
+export { CertificatesListPage } from "./pages/CertificatesListPage";
+export { Contact } from "./pages/Contact";
+export { ExperiencePage } from "./pages/ExperiencePage";
+export { StudiesPage } from "./pages/StudiesPage";

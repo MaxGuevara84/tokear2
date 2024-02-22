@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import { ErrorPage } from "../ErrorPage";
 import { Welcome } from "../Welcome";
 import {
-  CompleteListPage,
-  MensPage,
-  NewProduct,
-  StoreLayout,
-  WomensPage,
+  CertificatesListPage,
+  Contact,
+  ExperiencePage,
+  PortfolioLayout,
+  StudiesPage,
 } from "../products";
 import { Inicio } from "../products/pages/Inicio";
 
@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "store",
-    element: <StoreLayout />,
+    element: <PortfolioLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -25,20 +25,20 @@ export const router = createBrowserRouter([
         element: <Inicio />,
       },
       {
-        path: "complete",
-        element: <CompleteListPage />,
+        path: "certificates",
+        element: <CertificatesListPage />,
       },
       {
-        path: "men",
-        element: <MensPage />,
+        path: "experiencie",
+        element: <ExperiencePage />,
       },
       {
-        path: "women",
-        element: <WomensPage />,
+        path: "studies",
+        element: <StudiesPage />,
       },
       {
-        path: "new",
-        element: <NewProduct />,
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },
