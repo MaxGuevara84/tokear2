@@ -1,73 +1,47 @@
-import { collection, getDocs } from "firebase/firestore";
-import { ref, uploadBytes } from "firebase/storage";
-import { ChangeEvent, useEffect } from "react";
-import { FirebaseDB, FirebaseStorage } from "../../firebase/config";
-
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import { IProfile } from "../../interface/Profile";
+import { CircularProgress } from "@nextui-org/react";
+import { ImageComponent, useProfile } from "..";
+import "../styles/index.css";
 
 export const Inicio = () => {
-  useEffect(() => {
-    getInfo();
-  }, []);
+  const { profile, isLoading } = useProfile();
 
-  const getInfo = async () => {
-    const profileRef = collection(FirebaseDB, `profile`);
-    // Funcion para guardar
-    try {
-      const result = await getDocs(profileRef);
-      let profile: IProfile | undefined;
-      result.forEach((doc) => {
-        // console.log(doc.data());
-        profile = doc.data() as IProfile;
-      });
-      if (profile) {
-        console.log(profile.photoUrl);
-      } else {
-        console.log("No hay profile");
-      }
-      // await addDoc(collection(FirebaseDB, "comidas"), { ...newComida });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const imageSrc = profileQuery.data?.photoUrl;
 
-  const fileHandler = async (e: ChangeEvent<HTMLInputElement>) => {
-    // Detectar el archivo
-    const fileImg = e.target.files![0];
+  // console.log(profileQuery?.data);
 
-    // Cargar esto al storage
-    const refFile = ref(FirebaseStorage, `documentos/${fileImg.name}`);
-    await uploadBytes(refFile, fileImg);
-
-    //Obtener la url de la imagen
-    // imgUrl = await getDownloadURL(refFile);
-  };
+  if (isLoading)
+    return (
+      <div className="load">
+        <CircularProgress label="Loading..." />
+      </div>
+    );
 
   return (
-    <div>
-      <h3>Agregar Imagen</h3>
-      <form>
-        <label>Agregar Imagen: </label>
-        <ArrowUpwardIcon />
-
-        <br />
-        <input
-          type="file"
-          id="file"
-          placeholder="Agregar Imagen"
-          onChange={fileHandler}
-        />
-
-        <button style={{ color: "blue" }}>Guardar</button>
-      </form>
+    <div className="text">
+      <ImageComponent src={profile!.photoUrl} hash={profile!.imgHash} />
+      <div className="text-right">
+        <h1 className="name ">
+          {profile?.name} {profile?.lastname}
+        </h1>
+        <h3 className="age ">Años: {profile?.age}</h3>
+        <h3 className="phone ">Celular: {profile?.phone}</h3>
+        <h3 className="email">Email: {profile?.email}</h3>
+      </div>
     </div>
-
-    // <div style={{ display: "flex" }}>
-    /* <img
-        src="https://firebasestorage.googleapis.com/v0/b/portfolio-firebase-699b9.appspot.com/o/WhatsApp%20Image%202022-06-25%20at%2012.49.59%20AM.jpeg?alt=media&token=4a439ceb-4e2a-412d-a8bd-b46cecad40e4"
-        style={{ width: "300px" }}
-      /> */
-    /* </div> */
   );
 };
+
+// <div className="d-flex">
+//   <div style={{ display: "flex" }}>
+//     <img src={profileQuery.data?.photoUrl} style={{ width: "300px" }} />
+//   </div>
+
+//   <div>
+//     <h1>
+//       {profileQuery.data?.name} {profileQuery.data?.lastname}
+//     </h1>
+//     <h3>Años: {profileQuery.data?.age}</h3>
+//     <h3>Celular: {profileQuery.data?.phone}</h3>
+//     <h3>Email: {profileQuery.data?.email}</h3>
+//   </div>
+// </div>

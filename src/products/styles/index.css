@@ -1,0 +1,47 @@
+.load {
+  margin-left: 290px;
+  margin-top: 200px;
+}
+
+.text {
+  display: flex;
+  /* margin-left: 100px; */
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.text-right {
+  margin-left: 30px;
+}
+
+.name {
+  font-size: 100px;
+  background: #a7cfdf;
+  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.age {
+  font-size: 50px;
+  background: #a7cfdf;
+  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.email {
+  font-size: 50px;
+  background: #a7cfdf;
+  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.phone {
+  font-size: 50px;
+  background: #a7cfdf;
+  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

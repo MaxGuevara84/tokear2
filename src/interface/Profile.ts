@@ -7,4 +7,5 @@ export interface IProfile {
   photoUrl: string;
   name: string;
   lastname: string;
+  imgHash: string;
 }

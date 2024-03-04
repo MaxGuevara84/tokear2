@@ -1,5 +1,7 @@
-export { ProductCard } from "./components/ProductCard";
-export { ProductList } from "./components/ProductList";
+export { ProductCard } from "./components/ProductCard/ProductCard";
+export { ProductList } from "./components/ProductList/ProductList";
+export { ImageComponent } from "./components/imageComponent/ImageComponent";
+export { useProfile } from "./hooks/useProfile";
 
 export { PortfolioLayout } from "./layout/PortfolioLayout";
 
