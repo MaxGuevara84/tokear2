@@ -7,6 +7,14 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBSybUw6eOZm3ZH9-yeuNEyBCAgnADwiDM",
+  authDomain: "portfolio-dac42.firebaseapp.com",
+  projectId: "portfolio-dac42",
+  storageBucket: "portfolio-dac42.appspot.com",
+  messagingSenderId: "756040059799",
+  appId: "1:756040059799:web:0a290268fef50d733152d2",
+};
 
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig);
