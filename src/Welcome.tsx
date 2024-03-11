@@ -1,27 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import "./index.css";
 
 export const Welcome = () => {
   const navigate = useNavigate();
   return (
-    <div
-      style={{
-        color: "red",
-
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <button
-        onClick={() => navigate("/store")}
-        style={{
-          color: "red",
-          borderRadius: "5px",
-          backgroundColor: "blue",
-          padding: "8px",
-        }}
-      >
+    <div className="fondo-bienvenidos bn">
+      <button onClick={() => navigate("/store")} className="button">
         Bienvenidos
       </button>
     </div>

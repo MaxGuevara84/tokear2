@@ -3,7 +3,7 @@ import { Button, Image, Input, Textarea } from "@nextui-org/react";
 export const Contact = () => {
   return (
     <div className="w-full flex-col">
-      <h1 className="text-2xl font-bold">Nuevo producto</h1>
+      <h1 className="text-2xl font-bold">Contáctame</h1>
 
       <form className="w-full">
         <div className="flex justify-around items-center">

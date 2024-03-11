@@ -1,4 +1,8 @@
 .profileImage {
-  widht: 200px !important;
-  height: 200px !important;
+  widht: 500px !important;
+  height: 500px !important;
+
+  -webkit-box-shadow: 7px 4px 21px 1px rgba(113, 113, 163, 1);
+  -moz-box-shadow: 7px 4px 21px 1px rgba(113, 113, 163, 1);
+  box-shadow: 7px 4px 21px 1px rgba(113, 113, 163, 1);
 }

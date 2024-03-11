@@ -26,7 +26,7 @@ export const ProductCard = ({ certificate, onClick }: CertificateCardProps) => {
             {certificate.description}
           </Typography>
           <Typography variant="body2" color="white">
-            {certificate.graduated.seconds} Hs
+            {certificate.time_elapsed} Hs
           </Typography>
         </CardContent>
       </Card>

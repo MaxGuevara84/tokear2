@@ -8,7 +8,7 @@ const getInfoCertificates = async (): Promise<ICertificate[] | undefined> => {
 
   try {
     const result = await getDocs(certificateRef);
-    let certificates: ICertificate[] = [];
+    const certificates: ICertificate[] = [];
     result.forEach((doc) => {
       certificates.push({ ...(doc.data() as ICertificate), id: doc.id });
     });

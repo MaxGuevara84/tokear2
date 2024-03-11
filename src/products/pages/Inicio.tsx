@@ -30,18 +30,3 @@ export const Inicio = () => {
     </div>
   );
 };
-
-// <div className="d-flex">
-//   <div style={{ display: "flex" }}>
-//     <img src={profileQuery.data?.photoUrl} style={{ width: "300px" }} />
-//   </div>
-
-//   <div>
-//     <h1>
-//       {profileQuery.data?.name} {profileQuery.data?.lastname}
-//     </h1>
-//     <h3>Años: {profileQuery.data?.age}</h3>
-//     <h3>Celular: {profileQuery.data?.phone}</h3>
-//     <h3>Email: {profileQuery.data?.email}</h3>
-//   </div>
-// </div>

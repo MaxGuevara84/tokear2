@@ -1,13 +1,8 @@
-.load {
-  margin-left: 290px;
-  margin-top: 200px;
-}
-
 .text {
   display: flex;
-  /* margin-left: 100px; */
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  margin-top: 120px;
 }
 
 .text-right {
@@ -16,32 +11,24 @@
 
 .name {
   font-size: 100px;
-  background: #a7cfdf;
-  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #6d76b9;
 }
 
 .age {
   font-size: 50px;
-  background: #a7cfdf;
-  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #6d76b9;
 }
 
 .email {
   font-size: 50px;
-  background: #a7cfdf;
-  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #6d76b9;
 }
 
 .phone {
   font-size: 50px;
-  background: #a7cfdf;
+  color: #6d76b9;
+  /* background: #a7cfdf;
   background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }

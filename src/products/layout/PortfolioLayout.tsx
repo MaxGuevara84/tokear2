@@ -15,16 +15,40 @@ export const PortfolioLayout = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen pb-10">
-      <NavBar />
+    <>
+      <div className="flex flex-col min-h-screen pb-10">
+        <NavBar />
 
-      {/* <div style={{ display: "flex" }}>
+        {/* <div style={{ display: "flex" }}>
         <img src={logo} style={{ width: "300px" }} />
       </div> */}
 
-      <div className="flex px-10">
-        <Outlet />
+        <div
+          className="flex px-10"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            // marginTop: "115px",
+          }}
+        >
+          <Outlet />
+        </div>
       </div>
-    </div>
+
+      <footer
+        style={{
+          backgroundColor: "black",
+          position: "fixed",
+          bottom: 0,
+          width: "100%",
+          height: "40px",
+          color: "white",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <p>&copy; 2024, Portfolio Joaquin Carrizo</p>
+      </footer>
+    </>
   );
 };

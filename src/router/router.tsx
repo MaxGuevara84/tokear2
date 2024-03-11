@@ -4,9 +4,8 @@ import { Welcome } from "../Welcome";
 import {
   CertificatesListPage,
   Contact,
-  ExperiencePage,
   PortfolioLayout,
-  StudiesPage,
+  ProyectsPage,
 } from "../products";
 import { Inicio } from "../products/pages/Inicio";
 
@@ -29,13 +28,10 @@ export const router = createBrowserRouter([
         element: <CertificatesListPage />,
       },
       {
-        path: "experiencie",
-        element: <ExperiencePage />,
+        path: "proyectos",
+        element: <ProyectsPage />,
       },
-      {
-        path: "studies",
-        element: <StudiesPage />,
-      },
+
       {
         path: "contact",
         element: <Contact />,

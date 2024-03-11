@@ -14,8 +14,6 @@ export const CertificatesListPage = () => {
 
   return (
     <div className="flex-col">
-      <h1 className="text-2xl font-bold">Certificados</h1>
-
       <ProductList list={certificados} />
     </div>
   );

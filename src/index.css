@@ -2,8 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-html,body {
+html,
+body {
   background-color: black;
+}
+
+.fondo-bienvenidos {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(21, 21, 102, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.bn {
+  color: red;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  color: red;
+  border-radius: 5px;
+  background-color: blue;
+  padding: 8px;
 }

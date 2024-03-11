@@ -5,8 +5,7 @@ import styles from "./NavBar.module.css";
 const routes = [
   { to: "/store/inicio", text: "Inicio" },
   { to: "/store/certificates", text: "Cerificado" },
-  { to: "/store/experiencie", text: "Experiencia" },
-  { to: "/store/studies", text: "Estudios" },
+  { to: "/store/proyectos", text: "Proyectos" },
 ];
 
 export const NavBar = () => {
@@ -35,7 +34,7 @@ export const NavBar = () => {
             to="/store/contact"
             variant="flat"
           >
-            Contacto
+            Contactar
           </Button>
         </NavbarItem>
       </NavbarContent>
