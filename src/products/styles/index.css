@@ -1,17 +1,22 @@
 .text {
   display: flex;
+  flex-direction: column;
+  align-items: center; /* opcional, para centrar horizontalmente */
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 120px; */
+  widtg:100%
 }
 
 .text-right {
-  margin-left: 30px;
+  /* margin-left: 30px; */
+  margin-top: 150px;
 }
 
 .name {
-  font-size: 100px;
-  color: #6d76b9;
+  font-size: 50px;
+  color: black;
 }
 
 .age {
@@ -32,3 +37,130 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-item {
+  display: flex;
+  justify-content: space-around;
+  /* justify-content: center; */
+}
+
+.titulo1{
+  display:flex;
+  justify-content:center;
+  align-item:center;
+}
+
+.vector-row{
+  display: flex;
+  gap: 16px; /* espacio entre imágenes, opcional */
+  justify-content: center; /* centrado horizontal, opcional */
+  margin-top: 2rem; /* opcional si querés separación arriba */
+}
+
+.subtract-container {
+  position: relative; /* O un ancho fijo si lo necesitás */
+}
+
+.subtract {
+  display: block;
+  width: 100%;
+}
+
+.frame8 {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 4rem; /* o lo que necesites para espaciarla */
+}
+
+.frame700{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.img-row {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 1rem; /* espacio entre las imágenes */
+  flex-wrap: wrap; /* opcional: permite que se acomoden en pantallas pequeñas */
+}
+
+.img-side-by-side {
+  max-width: 300px; /* o el tamaño que prefieras */
+  height: auto;
+  margin-right: 250px;
+}
+.img-side-by-side-2 {
+  max-width: 300px; /* o el tamaño que prefieras */
+  height: auto;
+  margin-left: 50px;
+}
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* ← esto es clave */
+  width: 300px;
+}
+
+.login-consulta {
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* ← esto es clave */
+  width: 521px;
+}
+
+.login-prueba{
+  display: flex;
+  width: 50%;
+  height: 500px;
+  justify-content: center;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding-right: 2.5rem; /* espacio para el ícono */
+}
+
+.toggle-password-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.button {
+  color: #000000;
+  border-radius: 16px;
+  background-color: #FA9301;
+  padding: 8px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+
+
+

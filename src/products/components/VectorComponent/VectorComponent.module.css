@@ -1,0 +1,6 @@
+.vectorRow{
+    display: flex;
+    gap: 16px; /* espacio entre imágenes, opcional */
+    justify-content: center; /* centrado horizontal, opcional */
+    margin-top: 2rem; /* opcional si querés separación arriba */
+  }

@@ -1,22 +1,23 @@
-import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // import logo from "../../assets/img/undraw.svg.svg";
+// import footerSection from '../../assets/png/Footer-sección.png';
+import { ScrollToTop } from "../../components/ScrollToTop";
 import { NavBar } from "../../shared";
-
 export const PortfolioLayout = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // const bienvenido = () => {
   //   alert("Hola");
   // };
 
-  useEffect(() => {
-    navigate("/store/inicio");
-  }, []);
+  // useEffect(() => {
+  //   navigate("/store/inicio");
+  // }, []);
 
   return (
     <>
       <div className="flex flex-col min-h-screen pb-10">
+        <ScrollToTop/>
         <NavBar />
 
         {/* <div style={{ display: "flex" }}>
@@ -35,7 +36,17 @@ export const PortfolioLayout = () => {
         </div>
       </div>
 
-      <footer
+      {/* <img src={footerSection} style={{
+          backgroundColor: "black",
+          position: "fixed",
+          bottom: 0,
+          width: "100%",
+          height: "40%",
+          color: "white",
+          display: "flex",
+          justifyContent: "center",
+        }} /> */}
+      {/* <footer
         style={{
           backgroundColor: "black",
           position: "fixed",
@@ -48,7 +59,7 @@ export const PortfolioLayout = () => {
         }}
       >
         <p>&copy; 2024, Portfolio Joaquin Carrizo</p>
-      </footer>
+      </footer> */}
     </>
   );
 };
