@@ -47,15 +47,17 @@ export const FooterComponent = () => {
     <div className="flex justify-center mt-8">
       <img src={vector4} className="w-[90%] h-auto" />
     </div>
-   {/* Links en dos columnas */}
-   <div className="grid grid-cols-2 gap-y-2 w-full max-w-[300px] text-white text-[14px] mt-10 ml-24 font-light">
-      <a href="#">link1</a>
-      <a href="#" className="ml-40">link1</a>
-      <a href="#">link2</a>
-      <a href="#" className="ml-40">link2</a>
-      <a href="#">link3</a>
-      <a href="#" className="ml-40">link3</a>
-    </div>
+    <div className="flex flex-col gap-2 w-full max-w-[300px] text-white text-[14px] mt-10 ml-24 font-light">
+  <a target="_blank" rel="noopener noreferrer" href="https://es.cointelegraph.com/news/argentina-cnv-calls-public-consultation-for-new-capital-markets-regime">
+    CNV llama a consulta pública para régimen de tokenización
+  </a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.argentina.gob.ar/noticias/nuevo-regimen-de-tokenizacion">
+    Nuevo Régimen de Tokenización
+  </a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.forbesargentina.com/negocios/avanza-negocio-tokenizar-activos-argentina-real-estate-agro-sectores-mas-oportunidades-n70513">
+    Oportunidades Agro
+  </a>
+</div>
   </div>
   )
 }
