@@ -2,7 +2,7 @@ export const Wemake = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">SECCIÓN 5: ¿POR QUÉ UN FIDEICOMISO?</h2>
+        <h2 className="text-2xl font-semibold mb-4">¿POR QUÉ UN FIDEICOMISO?</h2>
         <p className="mb-4">
           En Tokear buscamos que la <strong>transparencia</strong> y la <strong>seguridad jurídica del inversor</strong> sean dos de los valores que justifiquen tu confianza en la adquisición de activos.
         </p>
