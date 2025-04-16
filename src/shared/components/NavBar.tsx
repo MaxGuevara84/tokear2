@@ -5,77 +5,88 @@ import styles from "./NavBar.module.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const routes = [
-	{ to: "/store/proyectos", text: "Proyecto" },
-	{ to: "/store/wemake", text: "Fideicomiso" },
-	{ to: "/store/nosotros", text: "Nosotros" },
-	{ to: "/store/FAQ", text: "FAQ" },
-	{ to: "/store/noticias", text: "Noticias" },
+  { to: "/store/proyectos", text: "Proyecto" },
+  { to: "/store/wemake", text: "Fideicomiso" },
+  { to: "/store/nosotros", text: "Nosotros" },
+  { to: "/store/FAQ", text: "FAQ" },
+  { to: "/store/noticias", text: "Noticias" },
 ];
 
 export const NavBar = () => {
-	const { user, isAuthenticated, logout } = useAuth0();
+  const { user, isAuthenticated, logout } = useAuth0();
 
-	return (
-		<Navbar>
-			{/* Logo Tokear con margen condicional */}
-			<NavLink
-				to="/"
-				className={`flex items-center gap-2 transition-all duration-300 ${
-					isAuthenticated ? "mr-auto" : ""
-				}`}
-			>
-				<img src={group673} alt="Tokear" className="h-8" />
-				<h1 className="text-white text-2xl font-bold">Tokear</h1>
-			</NavLink>
-
-			<NavbarContent
-  className="hidden sm:flex gap-6 ml-auto items-center"
-  justify="end"
->
-  {routes.map(({ to, text }) => (
-    <NavbarItem key={to}>
+  return (
+    <Navbar>
+      {/* Logo Tokear con margen condicional */}
       <NavLink
-        to={to}
-        className={({ isActive }) =>
-          isActive ? styles.active : styles.inactive
-        }
+        to="/"
+        className={`flex items-center gap-2 transition-all duration-300 ${
+          isAuthenticated ? "mr-auto" : ""
+        }`}
       >
-        {text}
+        <img src={group673} alt="Tokear" className="h-8" />
+        <h1 className="text-white text-2xl font-bold">Tokear</h1>
       </NavLink>
-    </NavbarItem>
-  ))}
 
-  {/* Condicional: si hay sesión, muestra nombre y logout */}
-  {isAuthenticated ? (
-    <div className="flex items-center gap-4 mr-12">
-      <span className="text-white">
-        Bienvenido, {user?.name?.split(" ")[0].slice(0, 10)}
-      </span>
-	<button
-onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-  className="text-white hover:underline"
->
-  Cerrar sesión
-</button>
-    </div>
-  ) : (
-    <NavbarItem>
-      <NavLink to="/store/inicio" className="text-white hover:underline">
-        Iniciar Sesión
-      </NavLink>
-    </NavbarItem>
-  )}
+      <NavbarContent
+        className="hidden sm:flex gap-6 ml-auto items-center"
+        justify="end"
+      >
+        {routes.map(({ to, text }) => (
+          <NavbarItem key={to}>
+            <NavLink
+              to={to}
+              className={({ isActive }) =>
+                isActive ? styles.active : styles.inactive
+              }
+            >
+              {text}
+            </NavLink>
+          </NavbarItem>
+        ))}
 
-  {/* Botón INVERTÍ con fondo naranja */}
-  <NavbarItem>
-    <NavLink
-      to="/store/inverti"
-      className="bg-[#E65F11] text-white font-semibold px-6 rounded-[8px]"
-    >
-      INVERTÍ
-    </NavLink>
-  </NavbarItem>
-</NavbarContent>
-		</Navbar>
-	);
+        {/* Condicional: si hay sesión, muestra nombre y logout */}
+        {isAuthenticated ? (
+          <div className="flex items-center gap-4 mr-12">
+            <span className="text-white">
+              Bienvenido, {user?.name?.split(" ")[0].slice(0, 10)}
+            </span>
+            <button
+              onClick={() =>
+                logout({ logoutParams: { returnTo: window.location.origin } })
+              }
+              className="text-white hover:underline"
+            >
+              Cerrar sesión
+            </button>
+          </div>
+        ) : (
+          <NavbarItem>
+            <NavLink to="/store/inicio" className="text-white hover:underline">
+              Iniciar Sesión
+            </NavLink>
+          </NavbarItem>
+        )}
+
+        {/* Botón INVERTÍ con lógica condicional */}
+        <NavbarItem>
+          <button
+            onClick={() => {
+              if (isAuthenticated) {
+                window.open(
+                  "https://opensea.io/assets/matic/0x200f4e428f896bc68a19d1d8b4c9a5f451b61a20/1",
+                  "_blank"
+                );
+              } else {
+                window.location.href = "/store/inicio";
+              }
+            }}
+            className="bg-[#E65F11] text-white font-semibold px-6 py-2 rounded-[8px] hover:opacity-90 transition-all"
+          >
+            INVERTÍ
+          </button>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
+  );
 };
