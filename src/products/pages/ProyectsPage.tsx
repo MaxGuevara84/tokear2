@@ -102,6 +102,9 @@ export const ProyectsPage = () => {
             <p className="text-[25px] font-medium mt-6">
             <span className="text-orange-200"> Liquidez:</span> Los tokens pueden ser negociados en mercados secundarios, ofreciendo flexibilidad a los inversores para comprar o vender sus participaciones.
             </p>
+            <p className="text-[25px] font-medium mt-6">
+            <span className="text-orange-200"> Rentabilidad verde:</span> Los inversores recibiran la renta proveniente de la venta de energia renovable.
+            </p>
           </div>
         </div>
         <FooterComponent/>
