@@ -1,5 +1,5 @@
 import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import group673 from "../../assets/png/Group673.png";
 import styles from "./NavBar.module.css";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -14,6 +14,7 @@ const routes = [
 
 export const NavBar = () => {
   const { user, isAuthenticated, logout } = useAuth0();
+  const navigate = useNavigate();
 
   return (
     <Navbar>
@@ -45,7 +46,7 @@ export const NavBar = () => {
           </NavbarItem>
         ))}
 
-        {/* Condicional: si hay sesión, muestra nombre y logout */}
+        {/* Si hay sesión, muestra nombre y logout */}
         {isAuthenticated ? (
           <div className="flex items-center gap-4 mr-12">
             <span className="text-white">
@@ -68,7 +69,7 @@ export const NavBar = () => {
           </NavbarItem>
         )}
 
-        {/* Botón INVERTÍ con lógica condicional */}
+        {/* Botón INVERTÍ con redirección según login */}
         <NavbarItem>
           <button
             onClick={() => {
@@ -78,7 +79,7 @@ export const NavBar = () => {
                   "_blank"
                 );
               } else {
-                window.location.href = "/store/inicio";
+                navigate("/store/inicio");
               }
             }}
             className="bg-[#E65F11] text-white font-semibold px-6 py-2 rounded-[8px] hover:opacity-90 transition-all"
