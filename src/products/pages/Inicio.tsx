@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAuth0 } from "@auth0/auth0-react";
 
-import vectorCoulto from "../../assets/png/Vector-ocultar.png";
 import "../styles/index.css";
 
 const paragraphs = [
@@ -56,11 +55,13 @@ export const Inicio = () => {
                 Hola, <span className="text-orange-400 font-bold">{user?.name}</span> 👋
               </div>
               <button
-                className="button mt-4"
-                onClick={() => logout({ returnTo: window.location.origin })}
-              >
-                Cerrar sesión
-              </button>
+  className="button mt-4"
+  onClick={() =>
+    logout({ logoutParams: { returnTo: window.location.origin } })
+  }
+>
+  Cerrar sesión
+</button>
             </>
           ) : (
             <>

@@ -13,7 +13,7 @@ const routes = [
 ];
 
 export const NavBar = () => {
-	const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+	const { user, isAuthenticated, logout } = useAuth0();
 
 	return (
 		<Navbar>
@@ -51,12 +51,12 @@ export const NavBar = () => {
       <span className="text-white">
         Bienvenido, {user?.name?.split(" ")[0].slice(0, 10)}
       </span>
-      <button
-        onClick={() => logout({ returnTo: window.location.origin })}
-        className="text-white hover:underline"
-      >
-        Cerrar sesión
-      </button>
+	<button
+onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+  className="text-white hover:underline"
+>
+  Cerrar sesión
+</button>
     </div>
   ) : (
     <NavbarItem>
